@@ -1,0 +1,293 @@
+body {
+    background-color: #1d1d1d;
+	color: #fff;
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+#full-screen-image {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#header {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    /*background-color: green;*/
+}
+@media (min-width: 768px) {
+    #header {
+    /*position: relative;*/
+    font-size: 40px;
+    }
+}
+#container {
+    display: flex;
+    flex-direction: column; /* По умолчанию вертикальная ориентация для мобильных устройств */
+    justify-content: space-between;
+    height: 90vh;
+    padding: 10px 0;
+    box-sizing: border-box; /*Оставляет неизменным размер*/
+    /*background-color: yellow;*/
+}
+@media (min-width: 768px) {
+    #container {
+    place-items: center;
+    }
+}
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    /*text-align: center;*/
+    /*place-items: center;*/
+    /*margin: 0 1% 0% 0%;*/
+    margin-top: 3%;
+    margin-bottom: 9%;
+    position: relative;
+    height: 6%;
+    /*border: 2px solid white;*/
+    width: 100%;
+    /*background-color: magenta;*/
+}
+@media (min-width: 768px) {
+    #buttons {
+        position: static;
+        order: 2;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+.button {
+    display: none;
+    padding: 0 15px;
+    /*padding: 0 0;*/
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Закругление углов */
+}
+@media (min-width: 768px) {
+    .button {
+     padding: 10px 80px;
+    }
+}
+#prev {
+    margin-left: 1vh;
+}
+@media (min-width: 768px) {
+    #prev {
+     margin-left: 1px;
+    }
+}
+#next {
+    margin-right: 1vh;
+}
+@media (min-width: 768px) {
+    #next {
+     margin-right: 1px;
+    }
+}
+.button:hover {
+    background-color: darkred;
+}
+#button-game {
+    /*padding: 0 50px;*/
+    position: absolute;
+    margin-top: 10%;
+    padding: 0 0;
+    background-color: red;
+    color: white;
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Закругление углов */
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%);
+}
+@media (min-width: 768px) {
+    #button-game {
+     top: 8%;
+     padding: 10px 50px;
+    }
+}
+#button-game:hover {
+    background-color: darkred;
+}
+#windows {
+    display: flex;
+    flex-direction: column; /* По умолчанию вертикальная ориентация для мобильных устройств */
+    width: 100%;
+}
+@media (min-width: 768px) {
+    #windows {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 94%;
+        max-height: 94%;
+        order: 1;
+    }
+}
+.window {
+    display: none;
+    border: 2px solid white;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 139);
+    /*background-color: magenta;*/
+}
+@media (min-width: 768px) {
+    .window {
+    }
+}
+.window h2 {
+    margin-top: 0;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.w-line{
+    margin-top: -13%;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .w-line {
+        margin-top: -15%;
+    }
+}
+.w-line::after {
+    content: "___________________________"; /* Повторение символа */
+}
+@media (min-width: 768px) {
+    .w-line::after {
+        content: "______________"; /* Повторение символа */
+    }
+}
+#questions {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+@media (min-width: 768px) {
+    #questions {
+        order: 2;
+        width: 100%;
+        height: 100%;
+    }
+}
+#options {
+   position: relative;
+}
+@media (min-width: 768px) {
+    #options {
+        width: 15%;
+        height: 100%;
+        order: 1;
+    }
+}
+#info {
+   position: relative;
+   margin-top: 3%;
+}
+@media (min-width: 768px) {
+    #info {
+        margin-top: 0;
+        width: 15%;
+        height: 100%;
+        order: 3;
+    }
+}
+#footer {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    /*background-color: green;*/
+    margin-top: 2%;
+}
+@media (min-width: 768px) {
+    #footer {
+        position: fixed;
+        font-size: 20px;
+        margin-top: 0;
+        bottom: 1%;
+    }
+}
+#information {
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+#buttons-option {
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*background-color: green;*/
+    padding-top: 25px;
+}
+.button-opt {
+    border: 2px solid white;
+    box-sizing: border-box;
+    background-color: blue;
+    /*padding: 0 15px;*/
+    margin-bottom: 20px;
+    /*padding: 0 0;*/
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 2px; /* Закругление углов */
+}
+@media (min-width: 768px) {
+    .button-opt {
+     /*padding: 10px 80px;*/
+    }
+}
+.button-opt:hover {
+    background-color: rgb(0, 0, 139);
+}
+#place {
+  position: relative;
+  border: none;
+  /*margin-bottom: 10%;*/
+  background-color: transparent;
+  /*background-color: green;*/
+}
+@media (min-width: 768px) {
+    #place {
+        /*margin-bottom: 0;*/
+        width: 70%;
+        order: 2;
+    }
+}
+#inner {
+    position: relative;
+    text-align: left;
+    padding: 6px;
+    min-height: 85vh;
+    max-height: 85vh;
+}
+@media (min-width: 768px) {
+    #inner  {
+        /*max-height: 500px;*/
+        /*overflow: hidden;*/
+    }
+}
+
+

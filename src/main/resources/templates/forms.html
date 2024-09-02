@@ -1,0 +1,80 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Add Game Form</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Add Questions and Answers</h1>-->
+<!--<form action="#" th:action="@{/games/save}" method="post">-->
+<!--    <div>-->
+<!--        <label for="question">Question:</label>-->
+<!--        <input type="text" id="question" name="question"/>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label for="answer">Answer:</label>-->
+<!--        <input type="text" id="answer" name="answer"/>-->
+<!--    </div>-->
+<!--    <button type="submit">Добавить все</button>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Game Form</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        label {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            width: 500px;
+            max-width: 100%;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>Add Questions and Answers</h1>
+<form action="#" th:action="@{/games/save}" method="post">
+    <div>
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question"/>
+    </div>
+    <div>
+        <label for="answer">Answer:</label>
+        <input type="text" id="answer" name="answer"/>
+    </div>
+    <button type="submit">Добавить все</button>
+</form>
+</body>
+</html>
+

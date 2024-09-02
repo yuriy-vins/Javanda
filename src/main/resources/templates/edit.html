@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Game Form</title>
+
+  <style>
+  form button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  #question {
+    /* CSS-правила для элемента с идентификатором "question" */
+    /* Например: */
+    border: 1px solid blue;
+    background-color: lightyellow;
+  }
+  #answer {
+    /* CSS-правила для элемента с идентификатором "question" */
+    /* Например: */
+    border: 1px solid blue;
+    background-color: lightyellow;
+    height: 500px;
+    text-align: left;
+    vertical-align: top;
+  }
+<!--  #answer:focus {-->
+<!--  /* CSS-правила для введенного текста */-->
+<!--  /* Например: */-->
+<!--  text-align: top;-->
+<!--  color: red;-->
+<!--  font-style: italic;-->
+<!--  padding: -400px, 10px;-->
+<!--  vertical-align: top;-->
+<!--}-->
+
+</style>
+
+
+</head>
+<body>
+<h1>Редактировать Question and Answer</h1>
+
+<form th:object="${gameForm}" method="post" action="/games/save" style="display: inline-block; width: 100%;">
+  <h2>Question:</h2>
+
+  <p>ID: <span th:text="${gameForm.question.id}"></span></p>
+
+  <input type="hidden" th:field="*{question.id}" />
+  <input type="hidden" th:field="*{answer.id}" />
+
+  <label for="question">Question:</label>
+  <input type="text" th:field="*{question.question}" id="question" name="question" style="width: 100%;" />
+
+  <!-- другие поля для объекта question -->
+
+  <h2>Answer:</h2>
+  <p>ID: <span th:text="${gameForm.answer.id}"></span></p>
+
+  <label for="answer">Answer:</label>
+  <input type="text" th:field="*{answer.answer}" id="answer" name="answer" style="width: 100%;" />
+
+  <!-- другие поля для объекта answer -->
+
+  <div style="margin-top: 20px;">
+    <button type="submit">Сохранить</button>
+  </div>
+</form>
+
+
+
+
+</body>
+</html>

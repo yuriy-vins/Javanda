@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+</head>
+<body>
+<h1>All Questions and Answers:</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Вопрос</th>
+        <th>Ответ</th>
+    </tr>
+    </thead>
+    <tbody>
+<!--    <tr th:each="game : ${games}">-->
+<!--        <td th:text="${game.id}"></td>-->
+<!--        <td th:text="${game.question}"></td>-->
+<!--        <td th:text="${game.answer}"></td>-->
+
+<!--        <td><a th:href="@{'/games/edit/' + ${game.id}}">Редактировать</a></td>-->
+<!--&lt;!&ndash;        <td><a th:href="@{'/games/delete/' + ${game.id}}" onclick="return confirm('Вы уверены, что хотите удалить эту игру?')">Удалить</a></td>&ndash;&gt;-->
+
+<!--        <td>-->
+<!--            <a th:href="@{'/games/delete/' + ${game.id}}">Удалить</a>-->
+<!--        </td>-->
+<!--    </tr>-->
+
+    <tbody>
+    <tr th:each="wrapper : ${games}">
+        <td th:text="${wrapper.question.id}"></td>
+        <td th:text="${wrapper.question.question}"></td>
+        <td th:text="${wrapper.answer.answer}"></td>
+        <td><a th:href="@{'/games/edit/' + ${wrapper.question.id}}">Редактировать</a></td>
+<!--        <td><a th:href="@{'/answers/edit/' + ${wrapper.answer.id}}">Редактировать ответ</a></td>-->
+    </tr>
+    </tbody>
+
+    </tbody>
+</table>
+<a href="/games/save">Добавить новую запись</a>
+</body>
+</html>

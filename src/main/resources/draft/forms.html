@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>height</title>
+  <style>
+<!--   .text {-->
+<!--    height: 500px; /* Высота блока */-->
+<!--    width: 300px; /* Ширина блока */-->
+
+<!--    padding: 7px; /* Поля вокруг текста */-->
+<!--    border: 1px solid #333; /* Параметры рамки */-->
+<!--   }-->
+#question {
+    /* CSS-правила для элемента с идентификатором "question" */
+    /* Например: */
+    border: 1px solid red;
+    background-color: lightyellow;
+    height: 500px;
+    /* и т.д. */
+  }
+  </style>
+</head>
+<body>
+
+  <label for="question">Question:</label>
+  <input type="text" th:field="*{question.question}" id="question" name="question" />
+
+</body>
+</html>

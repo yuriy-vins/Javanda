@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Кто хочет стать Java-программистом</title>
+  <meta charset="UTF-8">
+  <style>
+		body {
+			background-color: #1d1d1d;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			font-size: 18px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		h1 {
+			font-size: 36px;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		.question {
+			font-weight: bold;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		.answer {
+			display: block;
+			padding: 10px;
+			margin-bottom: 10px;
+			background-color: #fff;
+			color: #1d1d1d;
+			border-radius: 10px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		.answer:hover {
+			background-color: #eee;
+		}
+		.answer.correct {
+			background-color: #2ecc71;
+			color: #fff;
+		}
+		.answer.incorrect {
+			background-color: #e74c3c;
+			color: #fff;
+		}
+		.footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center; /* выравнивание текста по центру */
+        }
+
+		.full-screen-image {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+		button {
+            display: block; /* превращает кнопку в блочный элемент, занимающий всю ширину */
+            margin: 0 auto; /* автоматически центрирует кнопку по горизонтали */
+            padding: 20px; /* добавляет отступ вокруг текста кнопки */
+            font-size: 24px; /* устанавливает размер шрифта */
+            background-color: blue; /* задает цвет фона кнопки */
+            color: white; /* задает цвет текста */
+            border: none; /* убирает границу кнопки */
+            border-radius: 10px; /* добавляет закругление углов кнопки */
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+        button:active {
+            transform: translateY(2px);
+            background-color: blue;
+        }
+
+	</style>
+</head>
+<body onload="game()">
+<audio id="audio" src="music.mp3" preload="auto" autoplay></audio>
+
+<script>
+audio.volume = .25;
+
+function game() {
+  audio.play();
+<!--  window.location.href = "hello.html";-->
+}
+</script>
+
+<img class="full-screen-image" src="image.jpg">
+<div class="container">
+  <h1>Кто хочет стать Java-программистом</h1>
+  <div class="question">Какой язык использует Spring Framework?</div>
+  <div class="answers">
+    <div class="answer correct"><span>A.</span><span>Java</span></div>
+    <div class="answer incorrect"><span>A.</span><span>Python</span></div>
+    <div class="answer incorrect"><span>A.</span><span>C++</span></div>
+    <div class="answer incorrect"><span>A.</span><span>Ruby</span></div>
+  </div>
+  <button onclick="game()">Играть</button>
+
+  <div class="footer">© 2023 Кто хочет стать Java-программистом</div>
+</div>
+</body>
+</html>
+

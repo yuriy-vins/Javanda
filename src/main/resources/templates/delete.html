@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Confirmation</title>
+</head>
+<body>
+<h1>Подтверждение удаления</h1>
+<p>Вы действительно хотите удалить строку с этим ID ? <span th:text="${game.id}"></span>?</p>
+<form th:action="@{'/games/delete/' + ${game.id}}" method="post">
+    <button type="submit">Удалить нахер!!!</button>
+    <a th:href="@{/games}">Отменить</a>
+</form>
+</body>
+</html>
+

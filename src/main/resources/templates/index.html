@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="files/favicon.ico" type="image/x-icon">
+    <title>Javanda</title>
+<!--    <link rel="icon" href="data:,"> &lt;!&ndash; Это указывает, что иконка отсутствует &ndash;&gt;-->
+<!--    <link rel="stylesheet" type="text/css" href="../static/styles/index.css">&lt;!&ndash;Это для SpringBoot&ndash;&gt;-->
+    <link rel="stylesheet" type="text/css" href="styles/index.css"><!--Это для Intellij Idea-->
+</head>
+<body>
+
+<audio id="audio_start">
+    <source src="files/start.wav">
+</audio>
+<audio id="audio_loop" preload="auto">
+    <source src="files/loop.wav">
+</audio>
+<audio id="audioPlayer" preload="auto">
+<!--    <source src="/music.wav" type="audio/wav">-->
+    Your browser does not support the audio element.
+</audio>
+<!--Запомни!!! Тег autoplay не работает! Его в браузерах запретили. Только путем события в JavaScript.-->
+<audio id="audio" src="https://zvukipro.com/uploads/files/2019-03/1551975439_friend-clock-2008.mp3" preload="auto" autoplay></audio>
+<audio id="end" src="https://zvukipro.com/uploads/files/2019-03/1551978635_khsm_phone_end.mp3" preload="auto" autoplay></audio>
+
+<!--На три красные кнопки звуки-->
+<audio id="otvet" src="https://zvukipro.com/uploads/files/2022-08/1661165725_lowbatt.mp3" preload="auto" autoplay></audio>
+<audio id="ok" src="https://zvukipro.com/uploads/files/2022-08/1661165734_msgbox.mp3" preload="auto" autoplay></audio>
+<!--<audio id="backnext" src="https://zvukipro.com/uploads/files/2022-08/1661165692_menupop.mp3" preload="auto" autoplay></audio>-->
+<audio id="backnext" src="https://zvukipro.com/uploads/files/2022-08/1661165734_msgbox.mp3" preload="auto" autoplay></audio>
+
+<img id="full-screen-image" src="files/image.jpg" alt="image">
+
+<!-- Надписи над модальными окнами -->
+<div id="header">
+    Кто хочет стать Java-программистом
+</div>
+<div id="target"></div>
+<div id="container">
+    <button id="button-game">ИГРАТЬ</button>
+    <div id="windows">
+        <div class="window" id="place">
+        <div class="window" id="questions">
+            <div id="inner">
+                <p style="font-size: 24px; margin: 10px; word-break: break-all; color: white;">
+                    GPT-4 у вас на компьютере, без цензуры, бесплатно и в пару кликов — реальность. Вот подробная инструкция:
+
+                    Загружаем файл koboldcpp.exe с GitHub (https://github.com/LostRuins/koboldcpp/releases). Windows может ругаться на вирусы, но она так воспринимает почти весь opensource.
+
+                    Идем сюда (https://rentry.org/nur779) и выбираем подходящую нам модель формата ggml:
+
+                    — LLaMA — исходная слитая модель от Meta. Не обучена и практически без цензуры;
+                    — Alpaca — самая привлекательная модель, дотренированная на данных с инструкциями версия LLaMA. Рекомендуем GPT4xAlpaca;
+                    — Vicuna — та же LLaMA, но тренировали ее на диалогах с ChatGPT. Максимально на него похожа, в том числе цензурой.
+
+                    Учтите, что у моделей разное количество параметров (7B, 13B и т.д.) — чем их больше, тем лучше, но чат-бот будет отвечать дольше. Кроме того, возрастет и нагрузка на процессор и ОЗУ. Загружаем понравившуюся модель с помощью торрента.
+
+                    Запускаем koboldcpp.exe и в появившимся окне указываем путь к загруженной модели (желательно, чтобы в нем не было кириллицы).
+
+                    Спустя некоторое время в командной строке появится адрес «http://localhost:5001/» — открываем в браузере и наслаждаемся собственной бесплатной копией ChatGPT.
+                    GPT-4 у вас на компьютере, без цензуры, бесплатно и в пару кликов — реальность. Вот подробная инструкция:
+
+                    Загружаем файл koboldcpp.exe с GitHub (https://github.com/LostRuins/koboldcpp/releases). Windows может ругаться на вирусы, но она так воспринимает почти весь opensource.
+
+                    Идем сюда (https://rentry.org/nur779) и выбираем подходящую нам модель формата ggml:
+
+                    — LLaMA — исходная слитая модель от Meta. Не обучена и практически без цензуры;
+                    — Alpaca — самая привлекательная модель, дотренированная на данных с инструкциями версия LLaMA. Рекомендуем GPT4xAlpaca;
+                    — Vicuna — та же LLaMA, но тренировали ее на диалогах с ChatGPT. Максимально на него похожа, в том числе цензурой.
+
+                    Учтите, что у моделей разное количество параметров (7B, 13B и т.д.) — чем их больше, тем лучше, но чат-бот будет отвечать дольше. Кроме того, возрастет и нагрузка на процессор и ОЗУ. Загружаем понравившуюся модель с помощью торрента.
+
+                    Запускаем koboldcpp.exe и в появившимся окне указываем путь к загруженной модели (желательно, чтобы в нем не было кириллицы).
+
+                    Спустя некоторое время в командной строке появится адрес «http://localhost:5001/» — открываем в браузере и наслаждаемся собственной бесплатной копией ChatGPT.
+                    GPT-4 у вас на компьютере, без цензуры, бесплатно и в пару кликов — реальность. Вот подробная инструкция:
+
+                    Загружаем файл koboldcpp.exe с GitHub (https://github.com/LostRuins/koboldcpp/releases). Windows может ругаться на вирусы, но она так воспринимает почти весь opensource.
+
+                    Идем сюда (https://rentry.org/nur779) и выбираем подходящую нам модель формата ggml:
+
+                    — LLaMA — исходная слитая модель от Meta. Не обучена и практически без цензуры;
+                    — Alpaca — самая привлекательная модель, дотренированная на данных с инструкциями версия LLaMA. Рекомендуем GPT4xAlpaca;
+                    — Vicuna — та же LLaMA, но тренировали ее на диалогах с ChatGPT. Максимально на него похожа, в том числе цензурой.
+
+                    Учтите, что у моделей разное количество параметров (7B, 13B и т.д.) — чем их больше, тем лучше, но чат-бот будет отвечать дольше. Кроме того, возрастет и нагрузка на процессор и ОЗУ. Загружаем понравившуюся модель с помощью торрента.
+
+                    Запускаем koboldcpp.exe и в появившимся окне указываем путь к загруженной модели (желательно, чтобы в нем не было кириллицы).
+
+                    Спустя некоторое время в командной строке появится адрес «http://localhost:5001/» — открываем в браузере и наслаждаемся собственной бесплатной копией ChatGPT.
+                </p>
+            </div>
+            </div>
+            <div id="buttons">
+                <button class="button" id="prev">НАЗАД</button>
+                <button class="button" id="answer">ОТВЕТ</button>
+                <button class="button" id="next">ДАЛЬШЕ</button>
+            </div>
+            <div id="target-2"></div>
+        </div>
+        <div class="window" id="options">
+            <h2>Опции</h2>
+            <div class="w-line"></div>
+            <div id="buttons-option">
+                <button class="button-opt" id="stop">остановить игру</button>
+                <button class="button-opt" id="music">выключить звук</button>
+                <button class="button-opt" id="clear">забыть вопрос</button>
+                <button class="button-opt" id="add">добавить вопрос</button>
+                <button class="button-opt" id="change">изменить вопрос</button>
+                <button class="button-opt" id="delete">удалить вопрос</button>
+            </div>
+        </div>
+        <div class="window" id="info">
+            <h2>Рейтинг</h2>
+            <div class="w-line"></div>
+            <div id="information">
+                <p id="user"> Пользователь: User</p>
+                <p id="grade"> Звание: Trainee</p>
+                <p id="question-count"> Пройдено вопросов: 0</p>
+                <p id="question-count-forget"> Усвоение вопросов: 0</p>
+                <p id="question-count-topic"> Усвоение тем: 0</p>
+                <p id="timer-game"> Время игры: 0</p>
+            </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        © 2024 javanda.ru Проект в разработке..
+    </div>
+</div>
+
+<!--<script src="../static/scripts/index.js"></script>-->
+<script src="/scripts/index.js"></script>
+
+</body>
+</html>
+
+
+
